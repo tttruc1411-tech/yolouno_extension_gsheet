@@ -1,5 +1,6 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
   <category name="GOOGLE SHEETS" colour="#0f9d58" icon="table">
+    <label text="Khởi tạo WiFi"></label>
     <block type="gsheet_wifi_connect">
       <value name="SSID">
         <shadow type="text">
@@ -12,6 +13,7 @@
         </shadow>
       </value>
     </block>
+    <label text="Gửi dữ liệu 1 cột"></label>
     <block type="gsheet_send_data">
       <value name="URL">
         <shadow type="text">
@@ -29,6 +31,7 @@
         </shadow>
       </value>
     </block>
+    <label text="Gửi dữ liệu 2 cột"></label>
     <block type="gsheet_send_2_cols">
       <value name="URL">
         <shadow type="text">
@@ -56,6 +59,7 @@
         </shadow>
       </value>
     </block>
+    <label text="Gửi dữ liệu 3 cột"></label>
     <block type="gsheet_send_3_cols">
       <value name="URL">
         <shadow type="text">

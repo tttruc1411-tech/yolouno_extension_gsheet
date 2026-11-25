@@ -18,17 +18,12 @@
           <field name="TEXT">https://script.google.com/macros/s/.../exec</field>
         </shadow>
       </value>
-      <value name="LIGHT">
-        <shadow type="math_number">
-          <field name="NUM">0</field>
+      <value name="COL">
+        <shadow type="text">
+          <field name="TEXT">Ánh sáng</field>
         </shadow>
       </value>
-      <value name="TEMP">
-        <shadow type="math_number">
-          <field name="NUM">0</field>
-        </shadow>
-      </value>
-      <value name="HUMI">
+      <value name="VAL">
         <shadow type="math_number">
           <field name="NUM">0</field>
         </shadow>

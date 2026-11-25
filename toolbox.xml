@@ -20,7 +20,7 @@
       </value>
       <value name="COL">
         <shadow type="text">
-          <field name="TEXT">Ánh sáng</field>
+          <field name="TEXT">Tên cột</field>
         </shadow>
       </value>
       <value name="VAL">

@@ -4,8 +4,9 @@ Blockly.Blocks['gsheet_wifi_connect'] = {
   init: function() {
     this.jsonInit({
       "type": "gsheet_wifi_connect",
-      "message0": "kết nối WiFi %1 mật khẩu %2",
+      "message0": "Khởi tạo WiFi %1 tên WiFi %2 mật khẩu %3",
       "args0": [
+        { "type": "input_dummy" },
         { "type": "input_value", "name": "SSID", "check": "String" },
         { "type": "input_value", "name": "PASS", "check": "String" }
       ],
@@ -29,7 +30,7 @@ Blockly.Blocks['gsheet_send_data'] = {
   init: function() {
     this.jsonInit({
       "type": "gsheet_send_data",
-      "message0": "gửi lên Google Sheets %1 link Web App %2 tên cột %3 dữ liệu %4",
+      "message0": "Gửi dữ liệu 1 cột lên Google Sheets %1 link Web App %2 tên cột %3 dữ liệu %4",
       "args0": [
         { "type": "input_dummy" },
         { "type": "input_value", "name": "URL", "check": "String" },
@@ -57,7 +58,7 @@ Blockly.Blocks['gsheet_send_2_cols'] = {
   init: function() {
     this.jsonInit({
       "type": "gsheet_send_2_cols",
-      "message0": "gửi 2 cột lên Google Sheets %1 link Web App %2 cột 1 %3 dữ liệu 1 %4 cột 2 %5 dữ liệu 2 %6",
+      "message0": "Gửi dữ liệu 2 cột lên Google Sheets %1 link Web App %2 cột 1 %3 dữ liệu 1 %4 cột 2 %5 dữ liệu 2 %6",
       "args0": [
         { "type": "input_dummy" },
         { "type": "input_value", "name": "URL", "check": "String" },
@@ -89,7 +90,7 @@ Blockly.Blocks['gsheet_send_3_cols'] = {
   init: function() {
     this.jsonInit({
       "type": "gsheet_send_3_cols",
-      "message0": "gửi 3 cột lên Google Sheets %1 link Web App %2 cột 1 %3 dữ liệu 1 %4 cột 2 %5 dữ liệu 2 %6 cột 3 %7 dữ liệu 3 %8",
+      "message0": "Gửi dữ liệu 3 cột lên Google Sheets %1 link Web App %2 cột 1 %3 dữ liệu 1 %4 cột 2 %5 dữ liệu 2 %6 cột 3 %7 dữ liệu 3 %8",
       "args0": [
         { "type": "input_dummy" },
         { "type": "input_value", "name": "URL", "check": "String" },

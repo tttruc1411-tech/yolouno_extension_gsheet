@@ -1,0 +1,38 @@
+<xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
+  <category name="GOOGLE SHEETS" colour="#0f9d58" icon="table">
+    <block type="gsheet_wifi_connect">
+      <value name="SSID">
+        <shadow type="text">
+          <field name="TEXT">Ten_WiFi</field>
+        </shadow>
+      </value>
+      <value name="PASS">
+        <shadow type="text">
+          <field name="TEXT">Mat_Khau</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="gsheet_send_data">
+      <value name="URL">
+        <shadow type="text">
+          <field name="TEXT">https://script.google.com/macros/s/.../exec</field>
+        </shadow>
+      </value>
+      <value name="LIGHT">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="TEMP">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="HUMI">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+  </category>
+</xml>

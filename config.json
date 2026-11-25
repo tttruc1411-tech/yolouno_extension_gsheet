@@ -1,0 +1,13 @@
+{
+  "name": "Google Sheets",
+  "description": "Gửi dữ liệu cảm biến trực tiếp lên Google Sheets qua Apps Script",
+  "libs": [
+    "gsheet.py"
+  ],
+  "blocks": [
+    "definition.js"
+  ],
+  "toolbox": "toolbox.xml",
+  "languages": {},
+  "poster": "poster.png"
+}

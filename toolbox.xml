@@ -29,5 +29,69 @@
         </shadow>
       </value>
     </block>
+    <block type="gsheet_send_2_cols">
+      <value name="URL">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+      <value name="COL1">
+        <shadow type="text">
+          <field name="TEXT">Cột 1</field>
+        </shadow>
+      </value>
+      <value name="VAL1">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="COL2">
+        <shadow type="text">
+          <field name="TEXT">Cột 2</field>
+        </shadow>
+      </value>
+      <value name="VAL2">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
+    <block type="gsheet_send_3_cols">
+      <value name="URL">
+        <shadow type="text">
+          <field name="TEXT"></field>
+        </shadow>
+      </value>
+      <value name="COL1">
+        <shadow type="text">
+          <field name="TEXT">Cột 1</field>
+        </shadow>
+      </value>
+      <value name="VAL1">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="COL2">
+        <shadow type="text">
+          <field name="TEXT">Cột 2</field>
+        </shadow>
+      </value>
+      <value name="VAL2">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+      <value name="COL3">
+        <shadow type="text">
+          <field name="TEXT">Cột 3</field>
+        </shadow>
+      </value>
+      <value name="VAL3">
+        <shadow type="math_number">
+          <field name="NUM">0</field>
+        </shadow>
+      </value>
+    </block>
   </category>
 </xml>

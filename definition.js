@@ -52,3 +52,71 @@ Blockly.Python['gsheet_send_data'] = function(block) {
   var val = Blockly.Python.valueToCode(block, 'VAL', Blockly.Python.ORDER_ATOMIC) || '0';
   return 'gsheet.send_column_data(' + url + ', ' + col + ', ' + val + ')\n';
 };
+
+Blockly.Blocks['gsheet_send_2_cols'] = {
+  init: function() {
+    this.jsonInit({
+      "type": "gsheet_send_2_cols",
+      "message0": "gửi 2 cột lên Google Sheets %1 link Web App %2 cột 1 %3 dữ liệu 1 %4 cột 2 %5 dữ liệu 2 %6",
+      "args0": [
+        { "type": "input_dummy" },
+        { "type": "input_value", "name": "URL", "check": "String" },
+        { "type": "input_value", "name": "COL1", "check": "String" },
+        { "type": "input_value", "name": "VAL1" },
+        { "type": "input_value", "name": "COL2", "check": "String" },
+        { "type": "input_value", "name": "VAL2" }
+      ],
+      "previousStatement": null,
+      "nextStatement": null,
+      "colour": GSHEET_COLOR,
+      "tooltip": "Gửi gộp 2 cột dữ liệu lên Google Sheets trong 1 request",
+      "helpUrl": ""
+    });
+  }
+};
+
+Blockly.Python['gsheet_send_2_cols'] = function(block) {
+  Blockly.Python.definitions_['import_gsheet'] = 'import gsheet';
+  var url = Blockly.Python.valueToCode(block, 'URL', Blockly.Python.ORDER_ATOMIC) || "''";
+  var col1 = Blockly.Python.valueToCode(block, 'COL1', Blockly.Python.ORDER_ATOMIC) || "''";
+  var val1 = Blockly.Python.valueToCode(block, 'VAL1', Blockly.Python.ORDER_ATOMIC) || '0';
+  var col2 = Blockly.Python.valueToCode(block, 'COL2', Blockly.Python.ORDER_ATOMIC) || "''";
+  var val2 = Blockly.Python.valueToCode(block, 'VAL2', Blockly.Python.ORDER_ATOMIC) || '0';
+  return 'gsheet.send_batch(' + url + ', [(' + col1 + ', ' + val1 + '), (' + col2 + ', ' + val2 + ')])\n';
+};
+
+Blockly.Blocks['gsheet_send_3_cols'] = {
+  init: function() {
+    this.jsonInit({
+      "type": "gsheet_send_3_cols",
+      "message0": "gửi 3 cột lên Google Sheets %1 link Web App %2 cột 1 %3 dữ liệu 1 %4 cột 2 %5 dữ liệu 2 %6 cột 3 %7 dữ liệu 3 %8",
+      "args0": [
+        { "type": "input_dummy" },
+        { "type": "input_value", "name": "URL", "check": "String" },
+        { "type": "input_value", "name": "COL1", "check": "String" },
+        { "type": "input_value", "name": "VAL1" },
+        { "type": "input_value", "name": "COL2", "check": "String" },
+        { "type": "input_value", "name": "VAL2" },
+        { "type": "input_value", "name": "COL3", "check": "String" },
+        { "type": "input_value", "name": "VAL3" }
+      ],
+      "previousStatement": null,
+      "nextStatement": null,
+      "colour": GSHEET_COLOR,
+      "tooltip": "Gửi gộp 3 cột dữ liệu lên Google Sheets trong 1 request",
+      "helpUrl": ""
+    });
+  }
+};
+
+Blockly.Python['gsheet_send_3_cols'] = function(block) {
+  Blockly.Python.definitions_['import_gsheet'] = 'import gsheet';
+  var url = Blockly.Python.valueToCode(block, 'URL', Blockly.Python.ORDER_ATOMIC) || "''";
+  var col1 = Blockly.Python.valueToCode(block, 'COL1', Blockly.Python.ORDER_ATOMIC) || "''";
+  var val1 = Blockly.Python.valueToCode(block, 'VAL1', Blockly.Python.ORDER_ATOMIC) || '0';
+  var col2 = Blockly.Python.valueToCode(block, 'COL2', Blockly.Python.ORDER_ATOMIC) || "''";
+  var val2 = Blockly.Python.valueToCode(block, 'VAL2', Blockly.Python.ORDER_ATOMIC) || '0';
+  var col3 = Blockly.Python.valueToCode(block, 'COL3', Blockly.Python.ORDER_ATOMIC) || "''";
+  var val3 = Blockly.Python.valueToCode(block, 'VAL3', Blockly.Python.ORDER_ATOMIC) || '0';
+  return 'gsheet.send_batch(' + url + ', [(' + col1 + ', ' + val1 + '), (' + col2 + ', ' + val2 + '), (' + col3 + ', ' + val3 + ')])\n';
+};

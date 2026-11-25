@@ -35,11 +35,10 @@ def _url_encode(s):
             res.append('%{:02X}'.format(c))
     return ''.join(res)
 
-def send_column_data(url, col_name, value):
+def _http_get_with_retry(full_url):
     if not _wlan.isconnected():
         if not connect_wifi(_ssid, _password):
             return False
-    full_url = url + '?col=' + _url_encode(col_name) + '&val=' + _url_encode(value)
     for attempt in range(2):
         res = None
         try:
@@ -56,3 +55,26 @@ def send_column_data(url, col_name, value):
                 res.close()
             gc.collect()
     return False
+
+def send_column_data(url, col_name, value):
+    if not url or col_name is None or str(col_name).strip() == '':
+        return False
+    sep = '&' if '?' in url else '?'
+    full_url = url + sep + 'col=' + _url_encode(col_name) + '&val=' + _url_encode(value)
+    return _http_get_with_retry(full_url)
+
+def send_batch(url, items):
+    if not url or not items:
+        return False
+    params = []
+    idx = 1
+    for col_name, value in items:
+        if col_name is None or str(col_name).strip() == '':
+            continue
+        params.append('col{}={}&val{}={}'.format(idx, _url_encode(col_name), idx, _url_encode(value)))
+        idx += 1
+    if not params:
+        return False
+    sep = '&' if '?' in url else '?'
+    full_url = url + sep + '&'.join(params)
+    return _http_get_with_retry(full_url)
